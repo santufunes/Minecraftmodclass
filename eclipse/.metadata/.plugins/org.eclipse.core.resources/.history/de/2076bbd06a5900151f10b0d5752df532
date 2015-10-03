@@ -1,0 +1,35 @@
+package com.partsandcraft.tutorial;
+
+import net.minecraft.init.Blocks;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+
+@Mod(modid = Main.MODID, version = Main.VERSION)
+public class Main {
+public static final String MODID = "tutorial";
+public static final String VERSION = "1.0";
+@EventHandler
+public void init(FMLInitializationEvent event)
+{
+	// some example code
+    System.out.println("init >> "+Blocks.dirt.getUnlocalizedName());
+}
+
+@EventHandler
+public void preInit(FMLPreInitializationEvent event)
+{
+	// some example code
+    System.out.println("preinit >> "+Blocks.dirt.getUnlocalizedName());
+}
+ 
+@EventHandler
+    public void postInit(FMLPostInitializationEvent event)
+    {
+    	// some example code
+        System.out.println("postinit >> "+Blocks.dirt.getUnlocalizedName());
+    }
+}
+
